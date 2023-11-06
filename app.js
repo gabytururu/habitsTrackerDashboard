@@ -1,10 +1,20 @@
-const button = document.querySelector('#addButton')
-// button.addEventListener('click',()=>{
+const dialog = document.querySelector('dialog')
+const openModal = document.querySelector('#openModal')
+const closeModal = document.querySelector('#closeModal')
+const habitSubmit = document.querySelector('#submit')
 
-//     const div = document.createElement('div')
-//     div.classList.add('container')
-//     div.innerHTML = `
-//         <div class=''>
-//     `
+openModal.addEventListener('click',()=>{
+    dialog.showModal()
+})
 
-// })
+closeModal.addEventListener('click',()=>{
+    dialog.close()
+})
+
+const habits =[]
+habitSubmit.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    const habitName = document.querySelector('#habitName').value
+    console.log(habitName)
+    dialog.close()
+})
